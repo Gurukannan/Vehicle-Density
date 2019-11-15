@@ -1,5 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+ <head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <title>Spam Detection App</title>
+
+ </head>
 <style>
 form {
     margin: auto;
@@ -16,27 +29,44 @@ form {
 <head>
     <title>Vehicle Density</title>
 </head>
-
+<body 
+    style = "   
+            display: flex; 
+            margin: 0; 
+            padding: 0; 
+            min-height: 100vh; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+            text-align: center; 
+            background-image: url('https://techcrunch.com/wp-content/uploads/2017/10/gettyimages-660587164.jpg?w=1390&crop=1');
+ 		height: 100%;	    
+background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            " >
+</body>
 <body>
 <div class="login">
 
-	<h1>              Welcome to Predictive Analytics -By Guru.K </h1>
-	<h2>                         Vehicle Density Monitor</h2>
+	<h1 style="color:silver;"> Welcome to Predictive Analytics -By Guru.K </h1>
+	<h3 style="color:silver;"> Vehicle Density on road based on weather</h3>
 </body>
 <form action="{{ url_for('main') }}" method="POST">
     <fieldset>
-        <legend>Input values:</legend>
-               Temperature:
+        <legend style="color:silver;">Input values:</legend>
+        <p style="color:silver;">Temperature:</p>
         <input name="temperature" type="number" required>
         <br>
-        <br>        Humidity:
+        <br>
+	<p style="color:silver;">Humidity:</p>&nbsp&nbsp&nbsp&nbsp
         <input name="humidity" type="number" required>
         <br>
-        <br>       Windspeed:
+        <br> <p style="color:silver;">Windspeed:</p>&nbsp&nbsp
         <input name="windspeed" type="number" required>
         <br>
         <br>
-                    <input type="submit" align="center">
+        <input type="submit" align="center">
     </fieldset>
 </form>
 <br>
@@ -46,7 +76,7 @@ form {
     		<b>{{ variable }}</b> : {{ value }}
     	{% endfor %}
 		<br>
-    	<br> Predicted Number of Vehicles per km in use:
+    	<br>  <p style="color:silver;">Predicted Number of Vehicles per km in use:</p>
    		<p style="font-size:50px">{{ result }}</p>
     {% endif %}
 </div>
