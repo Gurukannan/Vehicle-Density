@@ -70,13 +70,13 @@ background-position: center;
     </fieldset>
 </form>
 <br>
-<div class="result" align="center">
+<div class="result" style="color:red;" align="center">
     {% if result %}
     	{% for variable, value in original_input.items() %}
     		<b>{{ variable }}</b> : {{ value }}
     	{% endfor %}
 		<br>
-    	<br>  <p style="color:silver;">Predicted Number of Vehicles per km in use:</p>
+    	<br>  <h3 style="color:silver;">Predicted Number of Vehicles per km:</h3>
    		<p style="font-size:50px">{{ result }}</p>
     {% endif %}
 </div>
